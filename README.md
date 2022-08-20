@@ -35,11 +35,11 @@
 
 ## Soft skills
 
-- Self-learning and proactivity
+- Self-learning and proactivity :
 	At 42, self-learning is at the core of its peer to peer learning methodology.
 	the learning process is based on googling.
 
-- Time management
+- Time management :
 	The school is open 24/7. Thus, you are free to work whenever you want, which
 	demands excellent time management skills for not "drowning" amid the
 	massive load of work demanded by the program.
