@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtellami <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ultimate_div_mod(int *a, int *b)
+char    *ft_strcpy(char *dest, char *src)
 {
-    int tmp;
+    int i;
 
-    tmp = *a;
-    *a = *a / *b;
-    *b = tmp / *b;
+    i = 0;
+    while (src[i])
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return dest;
 }
 
 /*
 #include <stdio.h>
 int main()
 {
-    int x = 10, y = 4;
-    ft_ultimate_div_mod(&x, &y);
-    printf("%d\n%d\n", x, y);   
+    char src[] = "nobody's gonna know", dest[sizeof(src)];
+    printf("%s\n", ft_strcpy(dest, src));
 }
 */

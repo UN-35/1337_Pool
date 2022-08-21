@@ -23,8 +23,7 @@ void    ft_swap(int *a, int *b)
 #include <stdio.h>
 int main()
 {
-    int x = 13;
-    int y = 42;
+    int x = 13, y = 42;
     ft_swap(&x, &y);
     printf("%d\n%d\n", x, y);
 }

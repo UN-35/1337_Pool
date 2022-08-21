@@ -15,13 +15,12 @@ void    ft_div_mod(int a, int b, int *div, int *mod)
     *div = a / b;
     *mod = a % b;
 }
+
 /*
 #include <stdio.h>
 int main()
 {
-    int x = 10;
-    int y = 4;
-    int div, mod;
+    int x = 10, y = 4, div, mod;
     ft_div_mod(x, y, &div, &mod);
     printf("%d\n%d\n", div, mod);
 }

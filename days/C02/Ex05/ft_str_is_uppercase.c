@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtellami <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ultimate_div_mod(int *a, int *b)
+int ft_str_is_uppercase(char *str)
 {
-    int tmp;
+    int i;
 
-    tmp = *a;
-    *a = *a / *b;
-    *b = tmp / *b;
+    i = 0;
+    while (str[i])
+    {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            i++;
+        else
+            return 0;
+    }
+    return 1;
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-    int x = 10, y = 4;
-    ft_ultimate_div_mod(&x, &y);
-    printf("%d\n%d\n", x, y);   
-}
-*/

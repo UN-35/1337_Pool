@@ -30,6 +30,6 @@ int main()
     int ********p8 = &p7;
     
     ft_ultimate_ft(&p8);
-    printf("%d", x);
+    printf("%d\n", x);
 }
 */

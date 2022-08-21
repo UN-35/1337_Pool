@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtellami <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,51 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ultimate_div_mod(int *a, int *b)
-{
-    int tmp;
+#include <unistd.h>
 
-    tmp = *a;
-    *a = *a / *b;
-    *b = tmp / *b;
+void    ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+int    ft_is_printable(char c)
+{
+    if (c >= 32 && c <= 126)
+        return 1;
+    else
+        return 0;
+}
+
+void    ft_putchar_hex(char c)
+{
+    char    *hex;
+
+    hex = "0123456789abcdef";
+    ft_putchar(hex[c / 16]);
+    ft_putchar(hex[c % 16]);
+}
+
+void    ft_putstr_non_printable(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        if (ft_is_printable(str[i]))
+            ft_putchar(str[i]);
+        else
+        {
+            ft_putchar('//');
+            ft_putchar_hex(str[i]);
+        }
+        i++;
+    }
 }
 
 /*
-#include <stdio.h>
 int main()
 {
-    int x = 10, y = 4;
-    ft_ultimate_div_mod(&x, &y);
-    printf("%d\n%d\n", x, y);   
+    ft_putstr_non_printable("i wanna/n thank me!");
 }
 */

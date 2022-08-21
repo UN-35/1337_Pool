@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtellami <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ultimate_div_mod(int *a, int *b)
+unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-    int tmp;
+    unsigned int i;
+    unsigned int l;
 
-    tmp = *a;
-    *a = *a / *b;
-    *b = tmp / *b;
+    i = 0;
+    l = 0;
+    while (src[l])
+        l++;
+    if (size == 0)
+        return (l);
+    while (src[i] && i < size - 1)
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return l;
 }
 
 /*
 #include <stdio.h>
 int main()
 {
-    int x = 10, y = 4;
-    ft_ultimate_div_mod(&x, &y);
-    printf("%d\n%d\n", x, y);   
+    char src[] = "The real ones been dyin', the fake ones is lit", dest[sizeof(src)];
+    printf("%s\n%d\n",dest, ft_strlcpy(dest, src, sizeof(src)));
 }
 */

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtellami <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ultimate_div_mod(int *a, int *b)
+char    *ft_strlowcase(char *str)
 {
-    int tmp;
+    int i;
 
-    tmp = *a;
-    *a = *a / *b;
-    *b = tmp / *b;
+    i = 0;
+    while (str[i])
+    {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            str[i] += 32;
+        i++;
+    }
+    return str;
 }
 
 /*
 #include <stdio.h>
 int main()
 {
-    int x = 10, y = 4;
-    ft_ultimate_div_mod(&x, &y);
-    printf("%d\n%d\n", x, y);   
+    printf("%s\n", ft_strlowcase("I SAW YOU DANCING IN A CROWDED ROOM"));
 }
 */

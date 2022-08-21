@@ -21,6 +21,6 @@ int main()
 {
     int x;
     ft_ft(&x);
-    printf("%d", x);
+    printf("%d\n", x);
 }
 */
