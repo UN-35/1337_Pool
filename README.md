@@ -11,7 +11,7 @@
   /*           	                                                                       */ 
   /* ********************************************************************************* */
 ```
----
+
 
 <h1 align="center">1337</h1>
 
@@ -21,10 +21,10 @@
 </p>
 
 ---
+<div align="center">
+<img src="https://github.com/Moadtell/1337_Pool/blob/master/srcs/future_is_loading.jpeg" />
+</div></br>
 
-![1337](https://github.com/moadtellami/1337/blob/master/1337_Pool/imgs/future.jpg)
-
----
 ## Skills i needed during the pool :
 
 - Basic command line
