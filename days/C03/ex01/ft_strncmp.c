@@ -23,14 +23,3 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-
-#include <stdio.h>
-
-int	main()
-{
-	char	s1[] = " ";
-	char	s2[] = "f";
-	char	s = ft_strncmp(s1, s2, 1);
-	printf("%d", ft_strncmp(s1, s2, 1));
-	printf("%c", s);
-}
