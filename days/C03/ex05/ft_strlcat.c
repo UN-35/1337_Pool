@@ -42,11 +42,3 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[j] = '\0';
 	return (d_len + s_len);
 }
-
-#include <stdio.h>
-int	main()
-{
-	char	dest[]= "hello";
-	char	src[] = "world";
-	printf("%d\n%s", ft_strlcat(dest, src, 3), dest);
-}

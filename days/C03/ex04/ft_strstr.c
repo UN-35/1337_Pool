@@ -31,11 +31,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
-#include<stdio.h>
-
-int main(){
-	char s[]="look c mom i can fly";
-	char tf[]="can";
-	printf("%s", ft_strstr(s,tf));
-}
