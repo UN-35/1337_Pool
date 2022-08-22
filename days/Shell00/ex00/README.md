@@ -1,1 +1,1 @@
-echo "z" > Z
+echo "Z" > z
